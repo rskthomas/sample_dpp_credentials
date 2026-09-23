@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://test.uncefact.org/vocabulary/untp/dte/0.6.0/",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://w3id.org/security/v2"
+  ],
+  "type": [
+    "DigitalTraceabilityEvent",
+    "VerifiableCredential"
+  ],
+  "id": "https://lab8.ereuse.org/credentials/0",
+  "issuer": {
+    "type": [
+      "CredentialIssuer"
+    ],
+    "id": "did:web:lab8.ereuse.org:ekoa_unlp",
+    "name": "lab8.ereuse.org"
+  },
+  "validFrom": "2026-06-08T19:52:24Z",
+  "credentialSubject": [
+    {
+      "type": [
+        "ObjectEvent",
+        "Event"
+      ],
+      "id": "urn:uuid:e6bc634d-17d5-4b5b-951a-99ab5dcfccc7",
+      "eventTime": "2026-06-08T16:52:24.881528",
+      "eventTimeZoneOffset": "+00:00",
+      "action": "observe",
+      "processType": "Para Donar",
+      "bizStep": "urn:epcglobal:cbv:bizstep:other",
+      "disposition": "urn:epcglobal:cbv:disp:active",
+      "bizLocation": "https://ekoa.unlp.edu.ar/",
+      "epcList": [
+        {
+          "type": [
+            "Item"
+          ],
+          "id": "did:web:lab8.ereuse.org:rPVmMt",
+          "name": "Dell Latitude 7420"
+        }
+      ],
+      "ereuse:deviceState": "Para Donar",
+      "ereuse:previousState": "nil",
+      "ereuse:lastUpdate": "2026-06-08T16:52:24.881550",
+      "facility": {
+        "id": "http://lab9.ereuse.org/evidence/credential/e848071d-5b7d-4973-a879-67fd563e8880/",
+        "name": "EKOA-UNLP",
+        "registeredId": "1",
+        "idScheme": {
+          "type": [
+            "IdentifierScheme"
+          ],
+          "id": "https://www.gleif.org/lei/",
+          "name": "Legal Entity Identifier"
+        }
+      }
+    }
+  ],
+  "credentialSchema": {
+    "type": "FullJsonSchemaValidator2021",
+    "id": "https://test.uncefact.org/vocabulary/untp/dte/untp-dte-schema-0.6.0.json"
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:lab8.ereuse.org:ekoa_unlp#ekoa_unlp",
+    "created": "2026-06-08T19:52:25Z",
+    "jws": "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..wmhw0vOZXm9WvcP8OZ9NHqW4enq0G-DvJRhyUZPbhiGOCkHAeWn4NEmWQ81q4Nwep0nTM0DLh8Y-1iL-ALrNAg"
+  }
+}

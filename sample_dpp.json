@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/",
+    "https://lab8.ereuse.org/context/untp-ict-vocabulary.jsonld",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://w3id.org/security/v2"
+  ],
+  "type": [
+    "ICTGoodsPassport",
+    "DigitalProductPassport",
+    "VerifiableCredential"
+  ],
+  "id": "https://lab8.ereuse.org/credentials/0",
+  "issuer": {
+    "type": [
+      "CredentialIssuer"
+    ],
+    "id": "did:web:lab8.ereuse.org:ekoa_unlp",
+    "name": "lab8.ereuse.org"
+  },
+  "validFrom": "2026-06-08T19:56:20Z",
+  "credentialSubject": {
+    "type": [
+      "ProductPassport"
+    ],
+    "id": "did:web:lab8.ereuse.org:rPVmMt",
+    "granularityLevel": "item",
+    "product": {
+      "type": [
+        "Product"
+      ],
+      "id": "did:web:lab8.ereuse.org:rPVmMt",
+      "name": "Latitude 7420",
+      "description": "A personal refurbished computing device.",
+      "characteristics": {
+        "chassis": "Laptop",
+        "manufacturer": "Dell",
+        "model": "Latitude 7420",
+        "cpu_model": "11th Gen Intel Core i5-1145G7",
+        "cpu_cores": "4",
+        "ram_total": 16384,
+        "ram_type": "LPDDR4",
+        "ram_slots": 8,
+        "slots_used": 8,
+        "drive": " SSD PM9A1 NVMe 256GB (238.47 GiB )",
+        "gpu_model": "Intel TigerLake-LP GT2 [Iris Xe Graphics]",
+        "serial": "69VJ7G3",
+        "warrantyPromise": {
+          "durationMonths": 3
+        }
+      },
+      "countryOfProduction": "AR",
+      "serialNumber": "69VJ7G3",
+      "producedAtFacility": {
+        "id": "http://lab9.ereuse.org/evidence/credential/e848071d-5b7d-4973-a879-67fd563e8880/",
+        "name": "EKOA-UNLP",
+        "registeredId": "1"
+      }
+    },
+    "traceabilityInformation": [
+      {
+        "type": [
+          "TraceabilityPerformance"
+        ],
+        "valueChainProcess": "Para Donar",
+        "verifiedRatio": 1.0,
+        "traceabilityEvent": [
+          {
+            "type": [
+              "SecureLink",
+              "Link"
+            ],
+            "linkURL": "http://lab9.ereuse.org/evidence/credential/fae4b840-0d11-4148-9092-eef9aa5c95b8/",
+            "linkName": "Traceability Event - Para Donar"
+          }
+        ]
+      }
+    ]
+  },
+  "credentialSchema": {
+    "type": "FullJsonSchemaValidator2021",
+    "id": "https://lab8.ereuse.org/schema/untp-dpp-ict-schema-0.6.0.json"
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:lab8.ereuse.org:ekoa_unlp#ekoa_unlp",
+    "created": "2026-06-08T19:56:20Z",
+    "jws": "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..4TPWHfNb3j5JA9BMR9SHzbsAVAtmwsxnxtx4KQ-eCZa4rVawBjc8t7B1oFHa_CO0qYdJErOtqLjDbDa3W50UAA"
+  }
+}

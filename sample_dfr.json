@@ -1,0 +1,99 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://w3id.org/security/v2"
+  ],
+  "type": [
+    "DigitalFacilityRecord",
+    "VerifiableCredential"
+  ],
+  "id": "https://lab8.ereuse.org/credentials/0",
+  "issuer": {
+    "type": [
+      "CredentialIssuer"
+    ],
+    "id": "did:web:lab8.ereuse.org:ekoa_unlp",
+    "name": "lab8.ereuse.org"
+  },
+  "validFrom": "2026-06-08T18:24:53Z",
+  "credentialSubject": {
+    "type": [
+      "FacilityRecord"
+    ],
+    "id": "https://ekoa.unlp.edu.ar/",
+    "facility": {
+      "type": [
+        "Facility"
+      ],
+      "id": "https://ekoa.unlp.edu.ar/",
+      "name": "EKOA-UNLP",
+      "description": "Un programa para la inclusi\u00f3n digital, la equidad social y el cuidado ambiental.",
+      "countryOfOperation": "AR",
+      "address": {
+        "type": [
+          "Address"
+        ],
+        "streetAddress": "Calle 3, C. 525 &",
+        "postalCode": "1900",
+        "addressLocality": "Tolosa",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "operatedByParty": {
+        "id": "https://ekoa.unlp.edu.ar/",
+        "name": "EKOA-UNLP",
+        "registeredId": "1",
+        "logo": "https://ekoa.unlp.edu.ar/wp-content/uploads/2022/05/logo-ekoa.png"
+      },
+      "processCategory": [
+        {
+          "id": "https://unstats.un.org/unsd/classifications/Econ/ISIC/Rev4/9511",
+          "code": "9511",
+          "name": "Repair of computers and peripheral equipment",
+          "schemeID": "https://unstats.un.org/unsd/classifications/Econ/ISIC/",
+          "schemeName": "UN ISIC Rev.4"
+        }
+      ],
+      "logo": "https://ekoa.unlp.edu.ar/wp-content/uploads/2022/05/logo-ekoa.png"
+    },
+    "conformityClaim": [
+      {
+        "id": "urn:uuid:e0d9cb51-f1af-4956-96be-058f75bf77a3",
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "description": "Gestor refuncionalizador de RAEEs",
+        "conformance": true,
+        "conformityTopic": "governance.compliance",
+        "referenceRegulation": {
+          "administeredBy": {
+            "id": "https://www.ambiente.gba.gob.ar/",
+            "name": "Ministerio de Ambiente"
+          }
+        },
+        "conformityEvidence": {
+          "type": [
+            "SecureLink",
+            "Link"
+          ],
+          "linkURL": "https://www.ambiente.gba.gob.ar/contenido/gestores_refuncionalizadores_de_raees_0",
+          "linkName": "lista de gestores"
+        }
+      }
+    ]
+  },
+  "credentialSchema": {
+    "type": "FullJsonSchemaValidator2021",
+    "id": "https://test.uncefact.org/vocabulary/untp/dfr/untp-dfr-schema-0.6.0.json"
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:lab8.ereuse.org:ekoa_unlp#ekoa_unlp",
+    "created": "2026-06-08T18:24:54Z",
+    "jws": "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..ChZjjtnKbxqVimm4QrX6fWsa2QhVHrkwj8XfnQOy4_0mpuwUEwni-D8d4ErTJmV5kbfiqFngekBqXT8QqHDaAQ"
+  }
+}

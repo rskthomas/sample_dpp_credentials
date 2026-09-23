@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ICTGoodsPassport",
+  "name": [
+    {
+      "value": "ICT Goods Passport",
+      "lang": "en"
+    }
+  ],
+  "description": "Extended UNTP DPP schema for ICT product characteristics (currently computers only)",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": { "type": "string" },
+      "readOnly": true,
+      "prefixItems": [
+        { "const": "https://www.w3.org/ns/credentials/v2" },
+        { "const": "https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/" }
+      ],
+      "default": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/"
+      ],
+      "uniqueItems": true
+    },
+    "type": {
+      "type": "array",
+      "readOnly": true,
+      "items": { "type": "string" },
+      "default": [
+        "ICTGoodsPassport",
+        "DigitalProductPassport",
+        "VerifiableCredential"
+      ],
+      "contains": { "const": "ICTGoodsPassport" }
+    },
+    "credentialSubject": {
+      "allOf": [
+        {
+          "$ref": "https://test.uncefact.org/vocabulary/untp/dpp/untp-dpp-schema-0.6.0.json#/$defs/ProductPassport"
+        },
+        {
+          "properties": {
+            "product": {
+              "allOf": [
+                {
+                  "$ref": "https://test.uncefact.org/vocabulary/untp/dpp/untp-dpp-schema-0.6.0.json#/$defs/Product"
+                },
+                {
+                  "properties": {
+                    "characteristics": {
+                      "allOf": [
+                        {
+                          "$ref": "https://test.uncefact.org/vocabulary/untp/dpp/untp-dpp-schema-0.6.0.json#/$defs/Characteristics"
+                        },
+                        {
+                          "type": "object",
+                          "description": "ICT-specific product characteristics",
+                          "additionalProperties": false,
+                          "properties": {
+                            "chassis": { "type": "string", "description": "Device type (e.g. Laptop, HDD, Monitor)" },
+                            "manufacturer": { "type": "string", "minLength": 2, "maxLength": 100 },
+                            "model": { "type": "string", "minLength": 1, "maxLength": 100 },
+                            "serial": { "type": "string", "minLength": 3, "maxLength": 100, "pattern": "^[A-Za-z0-9/\\-]+$" },
+                            "current_state": { "type": "string" },
+                            "user_properties": { "type": "string", "maxLength": 500 },
+
+                            "cpu_model": { "type": "string", "minLength": 3, "maxLength": 150 },
+                            "cpu_cores": { "type": "string" },
+                            "ram_total": { "type": "integer", "minimum":0 , "description": "RAM in MB" },
+                            "ram_type": { "type": "string" },
+                            "ram_slots": { "type": "integer", "minimum": 0, "maximum": 16 },
+                            "slots_used": { "type": "integer", "minimum": 0, "maximum": 16 },
+                            "gpu_model": { "type": "string", "maxLength": 150 },
+                            "drive": { "type": "string", "description": "Description of internal drive for computers" },
+
+                            "itemCondition": {
+                              "type": "string",
+                              "enum": [
+                                "GradeA",
+                                "GradeB",
+                                "GradeC",
+                                "GradeD"
+                              ],
+                              "description": "Cosmetic or functional grade of the item"
+                            },
+                            "warrantyPromise": {
+                              "type": "object",
+                              "description": "Details about the warranty offered by the refurbisher",
+                              "additionalProperties": false,
+                              "properties": {
+                                "durationMonths": { "type": "integer", "minimum": 0 },
+                                "termsOfService": { "type": "string", "format": "uri" }
+                              }
+                            },
+                            "operatorNotes": {
+                              "type": "string",
+                              "description": "Custom notes from the refurbishing operator",
+                              "maxLength": 1000
+                            }
+
+                          },
+                          "required": [ "chassis", "manufacturer", "model" ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "@context",
+    "type",
+    "credentialSubject"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://test.uncefact.org/vocabulary/untp/dpp/untp-dpp-schema-0.6.0.json"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "credentialSubject": {
+    "type": [
+      "ProductPassport"
+    ],
+    "id": "https://id.example-corp.com/products/LTP-2025-XYZ",
+    "product": {
+      "id": "https://id.example-corp.com/products/LTP-2025-XYZ",
+      "name": "ProBook 15 G11",
+      "type": [
+        "Product"
+      ],
+      "producedByParty": {
+        "id": "https://abr.business.gov.au/ABN/View?abn=90664869327",
+        "name": "Sample Company Pty Ltd.",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": [
+            "IdentifierScheme"
+          ],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      },
+      "description": "A reliable and efficient laptop for business professionals.",
+      "serialNumber": "PBG11-A5B6C7D8",
+      "productionDate": "2025-08-20",
+      "characteristics": {
+        "chassis": "Laptop",
+        "manufacturer": "Example Computer Corp.",
+        "model": "ProBook 15 G11",
+        "cpu_model": "Intel Core i5-1335U",
+        "cpu_cores": "8",
+        "ram_total": 16384,
+        "ram_type": "DDR5",
+        "drive": "NVMe",
+        "current_state": "new"
+      }
+    }
+  }
+}

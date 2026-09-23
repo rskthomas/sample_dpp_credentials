@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "value": "https://idhub.pangea.org/context#value",
+    "chassis": "https://idhub.pangea.org/context#chassis",
+    "characteristics": "https://idhub.pangea.org/context#characteristics",
+    "manufacturer": "https://idhub.pangea.org/context#manufacturer",
+    "model": "https://idhub.pangea.org/context#model",
+    "cpu_model": "https://idhub.pangea.org/context#cpu_model",
+    "cpu_cores": "https://idhub.pangea.org/context#cpu_cores",
+    "current_state": "https://idhub.pangea.org/context#current_state",
+    "ram_total": "https://idhub.pangea.org/context#ram_total",
+    "ram_type": "https://idhub.pangea.org/context#ram_type",
+    "ram_slots": "https://idhub.pangea.org/context#ram_slots",
+    "slots_used": "https://idhub.pangea.org/context#slots_used",
+    "drive": "https://idhub.pangea.org/context#drive",
+    "gpu_model": "https://idhub.pangea.org/context#gpu_model",
+    "user_properties": "https://idhub.pangea.org/context#user_properties",
+    "serial": "https://idhub.pangea.org/context#serial",
+    "itemCondition": "https://idhub.pangea.org/context#itemCondition",
+    "warrantyPromise": "https://idhub.pangea.org/context#itemCondition",
+    "operatorNotes": "https://idhub.pangea.org/context#operatorNotes"
+  }
+}
